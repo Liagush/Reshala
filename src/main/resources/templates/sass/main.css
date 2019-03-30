@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url(c:\Users\Lyagush\Desktop\GitVScode\Reshala\src\main\resources\templates\libs\normalize-css\normalize.css);
 @font-face {
   font-family: 'raleway-example';
@@ -44,6 +45,157 @@ body {
   text-align: center;
 }
 
+/* ОБЩИЕ СВОЙСТВА: НАЧАЛО */
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0px;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+/* ОБЩИЕ СВОЙСТВА: КОНЕЦ */
+/* СВОЙСТВА ГРИДОВ: НАЧАЛО */
+.grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 300px 1fr;
+      grid-template-columns: 300px 1fr;
+  grid-auto-rows: 60px 1fr 60px;
+  height: 100vh;
+}
+
+.grid .logo-container {
+  background-color: #F6A821;
+}
+
+.grid .search-container {
+  background-color: #FFFFFF;
+}
+
+.grid div:nth-child(3) {
+  background-color: #2A2D35;
+}
+
+.grid div:nth-child(4) {
+  background-color: #343740;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  grid-row: 2 / 4;
+}
+
+.grid div:nth-child(5) {
+  background-color: #24262D;
+}
+
+/* СВОЙСТВА ГРИДОВ: КОНЕЦ */
+/* СОВЙСТВА ВСЕХ ССЫЛОК: Начало */
+a {
+  text-decoration: none;
+  color: #949BA2;
+}
+
+a:active {
+  color: #F5F5F5;
+}
+
+a:hover {
+  color: #F5F5F5;
+}
+
+a:visited {
+  color: #949BA2;
+}
+
+.user-mail a {
+  font-weight: 600;
+  color: #6a727a;
+  margin-right: 18px;
+}
+
+.user-mail a:hover {
+  color: #3b3f44;
+}
+
+/* СОВЙСТВА ВСЕХ ССЫЛОК: КОНЕЦ */
+/* СОВЙСТВА ГРИДА ПОИСКА: НАЧАЛО */
+.logo h1 a {
+  color: White;
+  font-weight: 400;
+  letter-spacing: 10px;
+  vertical-align: middle;
+  padding: 0 0 0 65px;
+  float: left;
+  line-height: 30px;
+}
+
+.user {
+  float: right;
+  margin-top: 8px;
+  margin-right: 25px;
+}
+
+.user div {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.user-photo {
+  width: 45px;
+  height: 45px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.round {
+  width: auto;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.search {
+  float: left;
+  vertical-align: middle;
+  display: block;
+}
+
+.search-icon img {
+  height: 30px;
+  width: 30px;
+  position: relative;
+  top: 16px;
+  left: 25px;
+}
+
+.search .form-control {
+  margin: 0;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  color: #949ba2;
+  background-color: #ffffff;
+  border-radius: 4px;
+  -webkit-transition: none;
+  transition: none;
+  font-size: 0.88rem;
+  height: calc(2.25rem + 2px);
+  font-weight: 400;
+  line-height: 1.5;
+  overflow: visible;
+  position: relative;
+  top: -27px;
+  left: 75px;
+}
+
+/* СОВЙСТВА ГРИДА ПОИСКА: КОНЕЦ */
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {
