@@ -125,7 +125,7 @@ a:visited {
 }
 
 /* СОВЙСТВА ВСЕХ ССЫЛОК: КОНЕЦ */
-/* СОВЙСТВА ГРИДА ПОИСКА: НАЧАЛО */
+/* СОВЙСТВА ГРИДА С ЛОГОТИПОМ: НАЧАЛО */
 .logo h1 a {
   color: White;
   font-weight: 400;
@@ -136,6 +136,8 @@ a:visited {
   line-height: 30px;
 }
 
+/* СОВЙСТВА ГРИДА С ЛОГОТИПОМ: КОНЕЦ */
+/* СОВЙСТВА ГРИДА ПОИСКА: НАЧАЛО */
 .user {
   float: right;
   margin-top: 8px;
@@ -164,7 +166,8 @@ a:visited {
 .search {
   float: left;
   vertical-align: middle;
-  display: block;
+  display: inline-block;
+  width: calc(100vw - 670px);
 }
 
 .search-icon img {
@@ -191,11 +194,205 @@ a:visited {
   line-height: 1.5;
   overflow: visible;
   position: relative;
-  top: -27px;
+  top: -26px;
   left: 75px;
+  outline: none;
+  width: 100%;
 }
 
 /* СОВЙСТВА ГРИДА ПОИСКА: КОНЕЦ */
+/* СОВЙСТВА ГРИДА С КОНТЕНТОМ: НАЧАЛО */
+.content-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 150px;
+      grid-template-columns: 1fr 150px;
+  padding: 40px 45px 40px 45px;
+  grid-gap: 45px;
+}
+
+.content-container .content {
+  margin-top: 55px;
+  overflow: auto;
+  border-radius: 4px;
+}
+
+.content-container .content::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+.content-item {
+  font-size: 0.88rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: minmax(auto, 150px) minmax(auto, auto);
+      grid-template-rows: minmax(auto, 150px) minmax(auto, auto);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.content-item-text {
+  color: #949BA2;
+  background-color: #3B3E47;
+  overflow: hidden;
+  padding: 12px 20px 20px 20px;
+  text-align: justify;
+  font-weight: 600;
+}
+
+.content-item-buttons {
+  padding-top: 5px;
+  font-size: 0.88rem;
+  background-color: #3B3E47;
+}
+
+.content-item-buttons a {
+  float: right;
+  padding: 0px 15px;
+  margin: 0 0 0 2px;
+  color: #949BA2;
+  background-color: #494B54;
+}
+
+.content-item-buttons a:hover {
+  background-color: #52555F;
+}
+
+.content-item-buttons a:active {
+  background-color: #F6A821;
+  color: #F5F5F5;
+}
+
+.content-item-buttons a:first-child {
+  padding-right: 22px;
+}
+
+.search-and-bookmarks {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr auto;
+      grid-template-columns: 1fr auto;
+  height: 35px;
+  background-color: #3B3E47;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  overflow: hidden;
+  position: absolute;
+  top: 100px;
+  width: calc(100vw - 585px);
+}
+
+.search-and-bookmarks .search-info {
+  line-height: 35px;
+  vertical-align: middle;
+  color: white;
+  width: 100%;
+  padding-left: 20px;
+  font-size: 0.88rem;
+  font-weight: bold;
+  color: #F6A821;
+}
+
+.search-and-bookmarks .search-info span {
+  color: #949BA2;
+  padding-left: 10px;
+}
+
+.search-and-bookmarks .bookmarks {
+  float: right;
+  line-height: 35px;
+  vertical-align: middle;
+}
+
+.search-and-bookmarks .bookmarks a {
+  color: #949BA2;
+  background-color: #494B54;
+  padding: 10px 20px 10px 20px;
+}
+
+.search-and-bookmarks .bookmarks a:hover {
+  background-color: #52555F;
+}
+
+.search-and-bookmarks .bookmarks a:active {
+  background-color: #F6A821;
+  color: #F5F5F5;
+}
+
+.templates {
+  background-color: #3B3E47;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 35px;
+      grid-template-rows: 35px;
+  grid-auto-rows: auto;
+  text-align: center;
+  -ms-flex-line-pack: start;
+      align-content: start;
+  overflow: auto;
+  overflow-x: hidden;
+  border-radius: 4px;
+  height: auto;
+}
+
+.templates::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+.templates .template-column-name {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.templates .template {
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
+.templates .template .template-name {
+  color: #949BA2;
+  font-weight: bold;
+  line-height: 1.1rem;
+  font-size: 0.88rem;
+  padding: 0px 18px 5px;
+}
+
+.templates .template .template-icon img {
+  height: 80px;
+}
+
+.templates a {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+.templates a:hover {
+  background-color: #F6A821;
+}
+
+.templates a:hover .template .template-name {
+  color: #F5F5F5;
+}
+
+.template-column-name {
+  color: #F6A821;
+  font-size: 1.1rem;
+  vertical-align: middle;
+  line-height: 35px;
+  background-color: #2A2D35;
+  letter-spacing: 2px;
+}
+
+/* СОВЙСТВА ГРИДА С КОНТЕНТОМ: КОНЕЦ */
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {
