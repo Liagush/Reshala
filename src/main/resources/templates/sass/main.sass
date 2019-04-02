@@ -313,4 +313,109 @@ a:visited /* Цвет посещенных ссылок */
 /* СОВЙСТВА ГРИДА С КОНТЕНТОМ: КОНЕЦ */
 
 
+/* СОВЙСТВА ГРИДА SIDE-MENU: НАЧАЛО */
+
+.side-menu .list-of-laws
+    list-style: none
+    padding: 0
+    margin: 0
+
+.side-menu .list-of-laws .law-item a
+    display: block
+    padding: 5px 15px 5px 10px
+    margin-bottom: 2px
+    border-left: 5px solid $bg_form_gray
+    background-color: $bg_form_gray
+    line-height: 1.3rem
+    font-size: 0.88rem
+    font-weight: bold
+    color: $text_color_light_gray
+    text-align: justify
+
+.side-menu .list-of-laws .law-item:first-child
+    margin-top: 2px
+
+.side-menu .list-of-laws .law-item a:hover
+    background-color: $bg_dark
+    border-left: 5px solid $bg_dark
+    color: $text_color_gray
+    font-weight: bold
+
+.side-menu .list-of-laws .law-item a:active
+    border-left: 5px solid $accent
+    background-color: $bg_dark
+    color: $accent 
+    font-weight: bold
+
+/* СОВЙСТВА ГРИДА SIDE-MENU: КОНЕЦ */
+
+/* ФОРМА АВТОРИЗАЦИИ И РЕГИСТРАЦИИ: НАЧАЛО */
+
+
+
+
+/* ФОРМА АВТОРИЗАЦИИ И РЕГИСТРАЦИИ: КОНЕЦ */
+
+
+
+.wrapper
+    position: absolute
+    width: 100%
+    height: 100%
+    background-color: $bg_dark
+
+.box 
+   display: flex
+   justify-content: center
+   align-items: center
+   height: 100%
+   .glitch 
+      color: $accent
+      font-family: 'Poppins', sans-serif
+      font-weight: 600
+      font-size: 100px
+      position: relative
+      padding: 30px
+      &:before, &:after 
+         content: 'RESHALA'
+         color:  $accent
+         position: absolute
+         top: 0
+         overflow: hidden
+         padding: 30px
+      
+      &:before 
+         left: 3px
+         text-shadow: -3px 0 $accent - 50%
+         animation: glitch-before 2s linear 0.5s infinite alternate-reverse
+      
+      &:after 
+         left: -3px
+         text-shadow: -3px 0 $accent - 100%
+         animation: glitch-after 2s linear 0.5s infinite alternate
+      
+
+@keyframes glitch-before 
+   $steps: 30;
+   @for $i from 0 through $steps 
+      #{percentage($i*(1/$steps))} 
+         clip: rect(random(150)+px, 500px, random(150)+px, 30px)
+      
+   
+
+
+@keyframes glitch-after 
+   $steps: 30;
+   @for $i from 0 through $steps 
+      #{percentage($i*(1/$steps))} 
+         clip: rect(random(150)+px, 500px, random(150)+px, 30px)
+      
+   
+
+        
+    
+
+
+        
+
 @import "media" // Всегда в конце
