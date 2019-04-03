@@ -352,17 +352,169 @@ a:visited /* Цвет посещенных ссылок */
 /* ФОРМА АВТОРИЗАЦИИ И РЕГИСТРАЦИИ: НАЧАЛО */
 
 
+.background-autorize
+    background-color: $bg_dark_light
+    position: absolute
+    height: 100%
+    width: 100%
+
+.dws-wrapper
+    color: $text_color_gray
+    width: 100%
+    max-width: 280px
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    position: relative
+
+    
+.dws-form
+    position: relative
+    padding: 60px 50px 20px 50px
+    width: 100%
+    background-color: $bg_main_gray
+    border-radius: 10px
+    
+.dws-form a
+    text-decoration: none
+    transition: .5s
+    color: $text_color_milk
+
+.dws-form a:hover
+    color: $accent
+
+.dws-form input
+    display: block
+    width: 100%
+
+.tab-form
+     display: none
+     padding: 30px 0
+
+.tab-form.active
+     display: block
+     
+
+label.tab
+    font-weight: 400
+    text-transform: uppercase
+    padding: 8px
+    display: block
+    width: 140px
+    position: absolute
+    text-align: center
+    background-color: $bg_dark + 15%
+    border-bottom: 2px solid $bg_dark_light
+    font-size: 0.8rem
+    transition: .5s
+
+label.tab:nth-child(1)
+    border-right: 1px solid $bg_dark_light
+    top: 0px
+    left: 0px
+    border-radius: 10px 0 0 0
+
+label.tab:nth-child(2)
+    border-left: 1px solid $bg_dark_light
+    top: 0px
+    left: 140px
+    border-radius: 0 10px 0 0
+    
+
+label.tab.active
+    color: $accent
+    
+
+label.tab:hover
+    background-color: $accent
+    color: $text_color_milk
+
+.input
+    font-size: 1.5rem
+    border: 0px
+    border-bottom: 1px solid $bg_dark_light
+    padding: 12px 14px
+    box-sizing: border-box 
+    margin-bottom: 30px
+    margin-top: 10px
+    color: $accent
+    background-color: $bg_main_gray
+    outline: none
+    text-align: center 
+    transition: .5s
+
+.input:focus
+    border-bottom: 1px solid $accent
+
+
+a.login-button
+    display: block
+    width: 280px
+    padding: 5px
+    text-align: center
+    margin: 65px 20px 50px
+    font-weight: 400
+    text-transform: uppercase
+    font-size: 1.4rem
+    position: absolute
+    bottom: -50px
+    left: -20px
+    background-color: $bg_dark + 15%
+    border-radius: 0 0 10px 10px
+    border-top: 2px solid $bg_dark_light
+    color: $accent - 20%
+    
+
+    
+
+a.login-button:hover
+    background-color: $accent
+    color: $text_color_milk
+    
+
+a.forgot-button
+    text-align: center
+    font-size: 0.85rem
+    color: $bg_dark_light + 50%
+    font-weight: 600
+    margin-bottom: 35px
+    padding-top: 20px 
+    display: block
+    
+
+.tab-form .recover
+    display: grid
+    grid-template-columns: 20px 155px
+    position: relative
+    vertical-align: middle
+    align-items: center
+    justify-items: end
+    font-size: 0.7rem
+    grid-gap: 10px
+    padding-top: 30px
+    margin-bottom: 30px
+    font-weight: 600
+    line-height: 0.88rem
+
+.tab-form .recover a
+    color: $text_color_light_gray
+
+.tab-form .recover a:hover
+    color: $accent
+
 
 
 /* ФОРМА АВТОРИЗАЦИИ И РЕГИСТРАЦИИ: КОНЕЦ */
 
 
+/* ЗАСТАВКА GLITCH: НАЧАЛО */
 
 .wrapper
     position: absolute
     width: 100%
     height: 100%
-    background-color: $bg_dark
+    background-color: $bg_dark_light
 
 .box 
    display: flex
@@ -411,7 +563,7 @@ a:visited /* Цвет посещенных ссылок */
          clip: rect(random(150)+px, 500px, random(150)+px, 30px)
       
    
-
+/* ЗАСТАВКА GLITCH: КОНЕЦ */
         
     
 
